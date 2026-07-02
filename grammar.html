@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>语法手册 13讲 · 学位英语</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="start.html" class="nav-back">&#8592;</a>
+  <span class="nav-title">📐 语法手册 13讲</span>
+  <span class="nav-count">13 讲</span>
+</nav>
+
+<div class="bar" style="top:56px">
+  <div style="display:flex;gap:8px;flex-wrap:wrap;padding:4px 0">
+    <span id="all-btn" class="lt on" onclick="filterSec(null,this)">全部</span>
+  </div>
+</div>
+
+<main id="app" style="padding-top:8px"></main>
+<div class="toast" id="toast"></div>
+
+<script src="js/app.js"></script>
+<script>
+const GRAMMAR = [{"idx": 1, "title": "名词与冠词", "points": ["可数名词单复数；不可数名词用法", "定冠词the：特指、唯一事物、形容词最高级后", "不定冠词a/an：泛指、初次提及；辅音音素前用a，元音音素前用an", "零冠词：专有名词、抽象名词泛指、语言名称、三餐球类运动前"], "examples": [{"no": 1, "sent": "He is a university student who wants to study abroad.", "answer": "A. a", "note": "university 发音以辅音/j/开头，用a。", "audio": "audio/g_01_1.mp3"}, {"no": 2, "sent": "The sun rises in the east.", "answer": "C. The", "note": "sun 是唯一事物，用定冠词the。", "audio": "audio/g_01_2.mp3"}, {"no": 3, "sent": "She plays the violin every evening after dinner.", "answer": "C. the", "note": "演奏乐器加the（play the violin）。", "audio": "audio/g_01_3.mp3"}], "contrasts": [{"en": "an honest man", "text": "\"an honest man\"——以元音音素开头，用an", "audio": "audio/c_01_1.mp3"}, {"en": "play piano; play football", "text": "\"play piano\"(特指)需要the；\"play football\"不加冠词", "audio": "audio/c_01_2.mp3"}, {"en": "the information", "text": "\"the information\"错误——information 不可数，无复数，不加the 泛指", "audio": "audio/c_01_3.mp3"}]}, {"idx": 2, "title": "代词", "points": ["人称代词主格/宾格：I/me, he/him, she/her, they/them", "物主代词：my/mine, his/his, her/hers", "反身代词：myself, yourself, himself, themselves", "不定代词：each, every, both, neither, either, none, all"], "examples": [{"no": 1, "sent": "The manager asked my colleague and me to attend the meeting.", "answer": "B. me", "note": "介词and 后宾格me。", "audio": "audio/g_02_1.mp3"}, {"no": 2, "sent": "Neither of the two candidates is suitable for this position.", "answer": "B. Neither", "note": "Neither 表\"两者都不合适\"，谓语单数is。", "audio": "audio/g_02_2.mp3"}, {"no": 3, "sent": "She prepared the presentation by herself without any help.", "answer": "C. herself", "note": "强调独立完成用反身代词herself。", "audio": "audio/g_02_3.mp3"}], "contrasts": [{"en": "between you and I; between you and me", "text": "\"between you and I\" 错误，介词后用宾格→between you and me", "audio": "audio/c_02_1.mp3"}, {"en": "each/every", "text": "each/every + 单数名词+ 单数谓语", "audio": "audio/c_02_2.mp3"}]}, {"idx": 3, "title": "形容词和副词", "points": ["形容词修饰名词；副词修饰动词/形容词/副词", "比较级：形容词/副词+ er / more + 原级", "最高级：the + 形容词/副词+ est / most + 原级", "易混淆：hard(努力地/硬)/hardly(几乎不)；late(晚)/lately(最近)"], "examples": [{"no": 1, "sent": "The exam was much more difficult than I expected.", "answer": "C. much more", "note": "than 出现，用比较级；much 加强比较程度。", "audio": "audio/g_03_1.mp3"}, {"no": 2, "sent": "She has hardly been to China, so she knows very little about it.", "answer": "B. hardly", "note": "hardly 表\"几乎不\"，符合上下文逻辑。", "audio": "audio/g_03_2.mp3"}, {"no": 3, "sent": "Of all the students, Tom works the hardest.", "answer": "D. the hardest", "note": "\"of all\" 是最高级标志，且修饰动词works 用副词形式。", "audio": "audio/g_03_3.mp3"}], "contrasts": [{"en": "She sings beautiful", "text": "\"She sings beautiful\" 错误，修饰动词用副词beautifully", "audio": "audio/c_03_1.mp3"}, {"en": "more easier", "text": "\"more easier\" 错误，双重比较；应为easier", "audio": "audio/c_03_2.mp3"}]}, {"idx": 4, "title": "时态", "points": ["一般现在时：习惯、真理、客观事实", "一般过去时：过去某时发生的动作", "现在进行时：be + doing，此刻正在进行", "一般将来时：will/shall + 动词原形或be going to", "现在完成时：have/has + 过去分词；与already, yet, ever, since, for 连用", "过去完成时：had + 过去分词；表\"过去的过去\""], "examples": [{"no": 1, "sent": "She has worked here since 2010.", "answer": "C. has worked", "note": "since 2010 →现在完成时has worked。", "audio": "audio/g_04_1.mp3"}, {"no": 2, "sent": "By the time he arrived, the meeting had ended already.", "answer": "D. had ended", "note": "by the time + 过去时，主句用过去完成时had ended。", "audio": "audio/g_04_2.mp3"}, {"no": 3, "sent": "If it rains tomorrow, we will cancel the outdoor event.", "answer": "A. rains", "note": "if 条件句，用现在时代替将来时。", "audio": "audio/g_04_3.mp3"}], "contrasts": []}, {"idx": 5, "title": "语态（被动语态）", "points": ["被动语态：be + 过去分词（V-ed）", "时态变化：is done / was done / has been done / will be done", "by + 施动者（可省略）"], "examples": [{"no": 1, "sent": "The new policy was announced last month.", "answer": "B. was announced", "note": "政策被宣布，用被动语态was announced。", "audio": "audio/g_05_1.mp3"}, {"no": 2, "sent": "The project will be completed by the end of next year.", "answer": "B. will be completed", "note": "将来被完成，用will be completed。", "audio": "audio/g_05_2.mp3"}, {"no": 3, "sent": "The accident happened on a busy road yesterday morning.", "answer": "C. happened", "note": "happen/occur 是不及物动词，无被动语态，用主动happened。", "audio": "audio/g_05_3.mp3"}], "contrasts": [{"en": "The book was written by him", "text": "\"The book was written by him\"—— by + 人表施动者", "audio": "audio/c_05_1.mp3"}]}, {"idx": 6, "title": "情态动词", "points": ["can/could：能力，可能性，请求", "may/might：许可，可能性（might 把握性更低）", "must：必须；推测（肯定）", "should：应该；推测（较弱）", "need not：不必要（不等于must not）", "must not：禁止"], "examples": [{"no": 1, "sent": "You must not leave early — the meeting is still going on.", "answer": "B. must not", "note": "must not 表禁止，符合语境。", "audio": "audio/g_06_1.mp3"}, {"no": 2, "sent": "She must be at home — her lights are still on.", "answer": "A. must", "note": "must 表有把握的推测，灯还亮着说明人在家。", "audio": "audio/g_06_2.mp3"}, {"no": 3, "sent": "You should have told me earlier — now it is too late.", "answer": "C. should have", "note": "should have done 表\"本应该做而没做\"，含责备意味。", "audio": "audio/g_06_3.mp3"}], "contrasts": [{"en": "need not", "text": "need not 不必，mustn't 不许", "audio": "audio/c_06_1.mp3"}, {"en": "should have done", "text": "should have done：本应该做（实际没做），含批评意味", "audio": "audio/c_06_2.mp3"}]}, {"idx": 7, "title": "非谓语动词", "points": ["不定式（to do）：目的、将来意味；作主语、宾语、定语", "动名词（doing）：表习惯、一般事实；作主语、介词宾语", "现在分词（doing）：主动、进行；作状语、定语", "过去分词（done）：被动、完成；作状语、定语"], "examples": [{"no": 1, "sent": "I remember locking the door, but now I am not sure.", "answer": "B. locking", "note": "remember doing 表\"记得之前锁过了\"。", "audio": "audio/g_07_1.mp3"}, {"no": 2, "sent": "Having completed the project, she took a long vacation.", "answer": "C. Having completed", "note": "having completed 表在主句动作之前已经完成（先完成后休假）。", "audio": "audio/g_07_2.mp3"}, {"no": 3, "sent": "He stopped talking when the teacher walked in.", "answer": "A. talking", "note": "stop doing 表\"停止正在说话的动作\"。", "audio": "audio/g_07_3.mp3"}], "contrasts": [{"en": "stop to do; vs stop doing", "text": "stop to do（停下来去做）vs stop doing（停止正在做的事）", "audio": "audio/c_07_1.mp3"}, {"en": "remember to do; vs remember doing", "text": "remember to do（记得去做）vs remember doing（记得做过）", "audio": "audio/c_07_2.mp3"}]}, {"idx": 8, "title": "定语从句", "points": ["关系代词：who(人/主宾格), whom(人/宾格), which(物), that(人/物)", "关系副词：when(时间), where(地点), why(原因)", "限制性定语从句：不用逗号，紧接先行词", "非限制性定语从句：用逗号，补充说明，不能用that"], "examples": [{"no": 1, "sent": "The report which she submitted was full of errors.", "answer": "C. which", "note": "先行词report 为物，用which/that；作submitted 的宾语，选which。", "audio": "audio/g_08_1.mp3"}, {"no": 2, "sent": "This is the reason why I was late for work.", "answer": "C. why", "note": "reason 后用why 引导定语从句表原因。", "audio": "audio/g_08_2.mp3"}, {"no": 3, "sent": "She has two sisters, both of whom are doctors.", "answer": "B. both of whom", "note": "非限制性从句，先行词为人，用whom；both of whom 结构正确。", "audio": "audio/g_08_3.mp3"}], "contrasts": [{"en": "the only", "text": "先行词是the only, all, everything 等时，用that 不用which", "audio": "audio/c_08_1.mp3"}, {"en": "the city in which I was born", "text": "介词+ 关系代词：the city in which I was born（正式写法）", "audio": "audio/c_08_2.mp3"}]}, {"idx": 9, "title": "状语从句", "points": ["时间：when, while, as, before, after, until, as soon as, once", "条件：if, unless, as long as, provided that", "原因：because, since, as", "结果：so...that, such...that", "目的：so that, in order that", "让步：although, though, even though, even if", "比较：than, as...as"], "examples": [{"no": 1, "sent": "Although she was tired, she kept working until midnight.", "answer": "B. Although", "note": "前后意思转折，用although（尽管疲倦，但……）。", "audio": "audio/g_09_1.mp3"}, {"no": 2, "sent": "You can use the car as long as you return it by 6 pm.", "answer": "B. as long as", "note": "as long as 表\"只要\"，符合条件逻辑。", "audio": "audio/g_09_2.mp3"}, {"no": 3, "sent": "He did not realize his mistake until his teacher told him.", "answer": "A. until", "note": "not...until 结构：直到老师告诉他，他才意识到。", "audio": "audio/g_09_3.mp3"}], "contrasts": [{"en": "although/though", "text": "although/though 不能与but 连用", "audio": "audio/c_09_1.mp3"}, {"en": "not...until", "text": "until：持续到……；not...until：直到……才", "audio": "audio/c_09_2.mp3"}]}, {"idx": 10, "title": "名词性从句", "points": ["主语从句：That...is true；It is + adj. + that...（形式主语）", "宾语从句：I think (that)...；He asked whether/if...", "表语从句：The truth is that...", "同位语从句：the fact that...；the news that..."], "examples": [{"no": 1, "sent": "Whether he will come to the party is still unknown.", "answer": "B. Whether", "note": "主语从句，whether 表是否，if 不能做主语从句引导词。", "audio": "audio/g_10_1.mp3"}, {"no": 2, "sent": "The news that the company would lay off workers shocked everyone.", "answer": "B. that", "note": "news 的同位语从句，that 不充当成分，为同位语从句。", "audio": "audio/g_10_2.mp3"}, {"no": 3, "sent": "She asked me whether I had finished the report.", "answer": "C. whether", "note": "宾语从句表\"是否\"，用whether。", "audio": "audio/g_10_3.mp3"}], "contrasts": []}, {"idx": 11, "title": "虚拟语气", "points": ["与现在相反：if + 过去式，would/could/should/might + do", "与过去相反：if + had done，would/could + have done", "wish + 过去式（与现在相反）；wish + had done（与过去相反）", "It is time + 过去式（表该做了）"], "examples": [{"no": 1, "sent": "If I were you, I would think carefully before deciding.", "answer": "C. were", "note": "与现在相反的假设，if 从句中be 用were。", "audio": "audio/g_11_1.mp3"}, {"no": 2, "sent": "She wishes she had studied harder when she was at school.", "answer": "C. had studied", "note": "wish + had done 表对过去的遗憾。", "audio": "audio/g_11_2.mp3"}, {"no": 3, "sent": "If he had attended the meeting, he would have heard the announcement.", "answer": "B. had attended", "note": "与过去相反，if 从句用had done，主句用would have done。", "audio": "audio/g_11_3.mp3"}], "contrasts": [{"en": "I wish I were taller", "text": "\"I wish I were taller\"——不是was", "audio": "audio/c_11_1.mp3"}]}, {"idx": 12, "title": "倒装句", "points": ["完全倒装：Here comes the bus.（副词/介词短语位于句首）", "部分倒装：否定副词never, seldom, hardly, not only, no sooner 置于句首时", "\"so + 助动词+ 主语\"：表示\"……也是如此\"", "\"nor/neither + 助动词+ 主语\"：表示\"……也不\""], "examples": [{"no": 1, "sent": "Not only was he late, but he also forgot his homework.", "answer": "B. was he", "note": "Not only 置句首，后面部分倒装（was he）。", "audio": "audio/g_12_1.mp3"}, {"no": 2, "sent": "She can speak French, and so can her brother.", "answer": "B. can", "note": "\"so + 助动词+ 主语\"，与前句一致用can。", "audio": "audio/g_12_2.mp3"}, {"no": 3, "sent": "No sooner had he left the office when it started raining.", "answer": "A. No sooner", "note": "No sooner...than 表\"一……就……\"，no sooner 提前倒装。", "audio": "audio/g_12_3.mp3"}], "contrasts": [{"en": "So he is", "text": "\"So he is\"表\"他确实是\"（无倒装，是赞同）", "audio": "audio/c_12_1.mp3"}, {"en": "So is he", "text": "\"So is he\"表\"他也是\"（倒装）", "audio": "audio/c_12_2.mp3"}, {"en": "hardly...when", "text": "hardly...when 引导倒装，hardly 提前需部分倒装", "audio": "audio/c_12_3.mp3"}]}, {"idx": 13, "title": "主谓一致", "points": ["就近原则：either...or, neither...nor, not only...but also →谓语与最近主语一致", "集体名词（team, group, family）+ 单数或复数谓语（视整体还是成员而定）", "each, every, either, neither + 单数名词→单数谓语", "there be 就近原则"], "examples": [{"no": 1, "sent": "Neither the manager nor the employees are aware of the problem.", "answer": "B. are", "note": "neither...nor，就近原则，最近主语employees（复数）→are。", "audio": "audio/g_13_1.mp3"}, {"no": 2, "sent": "The number of people attending the course is increasing every year.", "answer": "B. is", "note": "\"the number of\" 表数量，谓语单数is。", "audio": "audio/g_13_2.mp3"}, {"no": 3, "sent": "Each of the students was asked to submit a report.", "answer": "C. was", "note": "each of + 复数名词，谓语仍用单数was。", "audio": "audio/g_13_3.mp3"}], "contrasts": [{"en": "The number of students is...", "text": "\"The number of students is...\"（数量，单数）", "audio": "audio/c_13_1.mp3"}, {"en": "A number of students are...", "text": "\"A number of students are...\"（许多，复数）", "audio": "audio/c_13_2.mp3"}]}];
+let curSec = null;
+
+// 生成专题导航
+const nav = document.querySelector('.bar div');
+GRAMMAR.forEach(g => {
+  const sp = document.createElement('span');
+  sp.className = 'lt';
+  sp.textContent = g.idx + '. ' + g.title;
+  sp.onclick = () => filterSec(g.idx, sp);
+  nav.appendChild(sp);
+});
+
+function filterSec(idx, el) {
+  document.querySelectorAll('.bar .lt').forEach(x => x.classList.remove('on'));
+  el.classList.add('on');
+  curSec = idx;
+  render();
+  if (idx !== null) {
+    setTimeout(() => {
+      const el2 = document.getElementById('sec-' + idx);
+      if (el2) el2.scrollIntoView({behavior:'smooth', block:'start'});
+    }, 80);
+  }
+}
+
+function render() {
+  const list = curSec ? GRAMMAR.filter(g => g.idx === curSec) : GRAMMAR;
+  document.getElementById('app').innerHTML = list.map(g => `
+<div class="gsec" id="sec-${g.idx}">
+  <div class="gsec-title">${g.idx}. ${esc(g.title)} <small>（标题不朗读）</small></div>
+  <div class="gpoints">${g.points.map(esc).join('\n')}</div>
+
+  ${g.examples.map(e => `
+  <div class="card">
+    <span class="tag tag-ex">📝 例句 · 可朗读</span>
+    <div class="sent-row">
+      <div class="sent-text">${esc(e.sent)}</div>
+      <button class="btn btn-s" data-text="${esc(e.sent)}" data-audio="${esc(e.audio)}"
+        onclick="speak(this)">🔊 朗读</button>
+    </div>
+    <div class="note">
+      <span class="ans">答案：${esc(e.answer)}</span>　${esc(e.note)}
+    </div>
+  </div>`).join('')}
+
+  ${g.contrasts.map(c => `
+  <div class="card">
+    <span class="tag tag-ct">⚠️ 对比句 · 可朗读</span>
+    <div class="sent-row">
+      <div class="sent-text">${esc(c.en)}</div>
+      <button class="btn btn-r" data-text="${esc(c.en)}" data-audio="${esc(c.audio)}"
+        onclick="speak(this)">🔊 朗读</button>
+    </div>
+    <div class="note">${esc(c.text)}</div>
+  </div>`).join('')}
+</div>`).join('');
+}
+
+render();
+</script>
+</body>
+</html>
