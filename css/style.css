@@ -268,3 +268,26 @@ main { padding: 12px 14px 72px; max-width: 780px; margin: 0 auto; }
   font-size: 14px;
   color: #64748b;
 }
+.site-brand {
+  width: 100%;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  color: #1f3fb7;
+  letter-spacing: 1px;
+  margin: 12px 0 8px;
+}
+
+.site-subbrand {
+  text-align: center;
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 16px;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 24px 12px;
+  font-size: 14px;
+  color: #64748b;
+}
