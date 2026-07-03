@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>学位英语点读学习系统 · 合肥骅兴教育</title>
+<title>学位英语点读学习系统 · 安徽备考</title>
 <link rel="stylesheet" href="css/style.css">
 <style>
 body { padding: 0; }
@@ -13,70 +13,66 @@ body { padding: 0; }
 <body>
 
 <div class="page">
-  <!-- Hero -->
   <div class="hero">
-    <h1>📚 学位英语<br>离线学习系统</h1>
-    <p>合肥骅兴教育 · 2026年安徽学位英语备考资料<br>
-       点击即可朗读 · 完全离线 · 手机电脑通用</p>
+    <h1>📖 学位英语<br>点读学习系统</h1>
+    <p>安徽成人本科/高等学历继续教育学位英语备考资料<br>
+       词汇、语法、阅读专项均可点读学习，手机和电脑通用</p>
     <div class="hero-stats">
-      <span class="stat-chip">📖 高频词汇 300词</span>
-      <span class="stat-chip">📐 语法手册 13讲</span>
-      <span class="stat-chip">📄 阅读专项 15篇</span>
-      <span class="stat-chip">🔊 661个音频</span>
+      <span class="stat-chip">基础必会词 300</span>
+      <span class="stat-chip">核心提分词 首批100</span>
+      <span class="stat-chip">语法手册 13讲</span>
+      <span class="stat-chip">阅读专项 15篇</span>
     </div>
   </div>
 
-  <!-- Module Grid -->
   <div class="module-grid">
-    <a href="vocabulary.html" class="module-card">
-      <span class="module-icon">📖</span>
-      <div class="module-name">高频词汇</div>
-      <div class="module-desc">300个核心词汇，每词均可点击朗读单词和例句</div>
+    <a href="vocabulary.html?module=basic" class="module-card">
+      <span class="module-icon">📘</span>
+      <div class="module-name">基础必会词300</div>
+      <div class="module-desc">保留原有基础词库，单词和例句继续使用本地音频点读</div>
       <div class="module-count">300 词</div>
     </a>
 
+    <a href="vocabulary.html?module=core" class="module-card">
+      <span class="module-icon">📗</span>
+      <div class="module-name">核心提分词500</div>
+      <div class="module-desc">面向安徽成人本科学位英语阅读、翻译和固定搭配，当前上线第一批</div>
+      <div class="module-count">首批100</div>
+    </a>
+
+    <a href="vocabulary.html?module=rt" class="module-card">
+      <span class="module-icon">📙</span>
+      <div class="module-name">阅读翻译高频词300</div>
+      <div class="module-desc">逻辑连接、抽象名词、长难句和被动结构高频表达</div>
+      <div class="module-count">下一批</div>
+    </a>
+
     <a href="grammar.html" class="module-card">
-      <span class="module-icon">📐</span>
+      <span class="module-icon">📚</span>
       <div class="module-name">语法手册</div>
-      <div class="module-desc">13个语法专题，例句与对比句均可朗读</div>
+      <div class="module-desc">13 个语法专题，例句与对比句均可朗读</div>
       <div class="module-count">13 讲</div>
     </a>
 
     <a href="reading.html" class="module-card">
       <span class="module-icon">📄</span>
       <div class="module-name">阅读专项</div>
-      <div class="module-desc">15篇阅读理解，点击正文句子即可朗读，含5道选择题</div>
+      <div class="module-desc">15 篇阅读理解，点击正文句子即可朗读，含选择题训练</div>
       <div class="module-count">15 篇</div>
     </a>
 
     <div class="module-card" onclick="showTips()">
       <span class="module-icon">💡</span>
-      <div class="module-name">使用说明</div>
-      <div class="module-desc">如何使用本系统，朗读功能说明</div>
+      <div class="module-name">备考说明</div>
+      <div class="module-desc">查看系统用途、资料范围和学习提醒</div>
       <div class="module-count" style="color:var(--brand3)">查看</div>
     </div>
   </div>
 
-  <!-- Tips -->
   <div class="tips-card" id="tips-block" style="display:none">
-    <div class="tips-title">💡 使用说明</div>
+    <div class="tips-title">备考说明</div>
     <div class="tips-list">
-      1. 将整个文件夹复制到手机或电脑<br>
-      2. 双击 <strong>start.html</strong> 在浏览器中打开<br>
-      3. 点击 🔊 按钮即可朗读（本地音频，无需联网）<br>
-      4. 如遇音频无法播放，浏览器会自动切换语音合成<br>
-      5. 手机建议使用 Chrome 或 Safari 打开<br>
-      6. <strong>注意</strong>：audio 文件夹须与 HTML 文件在同一目录<br>
-    </div>
-  </div>
-
-  <!-- Study plan -->
-  <div class="tips-card" style="background:#eff6ff;border-color:#bfdbfe;margin-top:12px">
-    <div class="tips-title" style="color:#1e40af">📅 5天复习建议</div>
-    <div class="tips-list" style="color:#1e3a8a">
-      Day 1-2：词汇 A-M（前150词）<br>
-      Day 3-4：词汇 N-Z（后150词）<br>
-      Day 5  ：语法手册 13讲 + 阅读训练<br>
+      本系统为安徽成人本科/高等学历继续教育学位英语备考点读资料，仅供学生学习使用。考试政策、考试安排、题型要求以安徽继续教育公共英语联盟及各高校继续教育学院最新通知为准。本系统不含泄露真题，不承诺包过，不声称官方授权。
     </div>
   </div>
 </div>

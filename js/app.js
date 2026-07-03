@@ -49,7 +49,11 @@ function speak(btn) {
 
 function _fallback(text, btn) {
   if (!text) { _clearBtn(); return; }
-  if (!('speechSynthesis' in window)) { _clearBtn(); _gtts(text); return; }
+  if (!('speechSynthesis' in window)) {
+    _clearBtn();
+    showToast('本地音频不可用，请检查 audio 文件');
+    return;
+  }
   speechSynthesis.cancel();
   const u = new SpeechSynthesisUtterance(text);
   u.lang = 'en-US'; u.rate = 0.88;
@@ -58,15 +62,12 @@ function _fallback(text, btn) {
     u.voice = vs.find(v => /Jenny|Zira|Samantha|Female/i.test(v.name)) || vs[0];
   }
   u.onend   = () => _clearBtn();
-  u.onerror = () => { _clearBtn(); _gtts(text); };
+  u.onerror = () => {
+    _clearBtn();
+    showToast('本地音频不可用，请检查 audio 文件');
+  };
   speechSynthesis.speak(u);
   showToast('本地音频不可用，已用浏览器语音');
-}
-
-function _gtts(text) {
-  window.open('https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q='
-    + encodeURIComponent(text.slice(0, 190)), '_blank');
-  showToast('已打开Google TTS在线朗读');
 }
 
 /* 预加载语音列表 */
@@ -147,7 +148,11 @@ function speakSent(span) {
   document.querySelectorAll('.sent-span.playing-sent').forEach(s => s.classList.remove('playing-sent'));
   span.classList.add('playing-sent');
   player.pause(); speechSynthesis.cancel(); _clearBtn();
-  if (!('speechSynthesis' in window)) { _gtts(text); return; }
+  if (!('speechSynthesis' in window)) {
+    span.classList.remove('playing-sent');
+    showToast('浏览器不支持语音朗读');
+    return;
+  }
   const u = new SpeechSynthesisUtterance(text);
   u.lang='en-US'; u.rate=0.88;
   const vs = speechSynthesis.getVoices().filter(v=>v.lang.startsWith('en'));
