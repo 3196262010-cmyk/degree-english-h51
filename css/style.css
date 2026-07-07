@@ -80,6 +80,30 @@ body { font-family: "PingFang SC","Microsoft YaHei",system-ui,sans-serif;
   padding: 0 2px 8px;
 }
 
+/* ===== AUDIO HELPERS ===== */
+.audio-hint {
+  max-width: 780px; margin: 0 auto 12px;
+  padding: 10px 12px; border-radius: 12px;
+  border: 1px solid #bfdbfe; background: #eff6ff;
+  color: #1d4ed8; font-size: 13px; line-height: 1.55;
+}
+.bar .audio-hint { max-width: none; margin: 0 0 8px; }
+.audio-hint-wechat {
+  border-color: #fdba74; background: #fff7ed;
+  color: #9a3412; font-weight: 800;
+}
+.audio-tools {
+  display: flex; justify-content: center;
+  margin: -4px 0 12px;
+}
+.sound-test-btn {
+  border: none; border-radius: 999px;
+  background: var(--brand2); color: #fff;
+  padding: 11px 20px; font-size: 15px; font-weight: 800;
+  cursor: pointer; box-shadow: 0 4px 14px rgba(5,150,105,.25);
+}
+.sound-test-btn:active { transform: scale(.96); }
+
 /* ===== MAIN CONTENT ===== */
 main { padding: 12px 14px 72px; max-width: 780px; margin: 0 auto; }
 
@@ -226,9 +250,9 @@ main { padding: 12px 14px 72px; max-width: 780px; margin: 0 auto; }
 .toast {
   position: fixed; left: 50%; bottom: 80px; transform: translateX(-50%);
   background: rgba(30,41,59,.9); color: #fff; font-size: 13px;
-  padding: 10px 18px; border-radius: 999px; opacity: 0;
+  padding: 10px 18px; border-radius: 14px; opacity: 0;
   transition: opacity .3s; z-index: 99; pointer-events: none;
-  max-width: 88vw; text-align: center; white-space: nowrap;
+  max-width: 88vw; text-align: center; white-space: normal; line-height: 1.55;
 }
 .toast.show { opacity: 1; }
 
